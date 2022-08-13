@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ch-jJ-Y1y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pickerview-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ms5-Za-hef">
+                                <rect key="frame" x="186.5" y="281" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VX-ps-c0e">
+                                <rect key="frame" x="0.0" y="445" width="414" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="9D3-5f-6ih"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFa-IR-iOX">
+                                <rect key="frame" x="173.5" y="750" width="67.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Göster"/>
+                                <connections>
+                                    <action selector="goster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a4K-nY-Ud0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0p-vB-zEq">
+                                <rect key="frame" x="207" y="822" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L0p-vB-zEq" firstAttribute="top" secondItem="nFa-IR-iOX" secondAttribute="bottom" constant="41" id="2kA-BQ-MNq"/>
+                            <constraint firstItem="7VX-ps-c0e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5OC-UM-oB7"/>
+                            <constraint firstItem="nFa-IR-iOX" firstAttribute="top" secondItem="7VX-ps-c0e" secondAttribute="bottom" constant="195" id="HpT-5A-0ZU"/>
+                            <constraint firstItem="Ms5-Za-hef" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="MqB-jr-AGt"/>
+                            <constraint firstItem="Ms5-Za-hef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QVc-L0-GEu"/>
+                            <constraint firstItem="7VX-ps-c0e" firstAttribute="top" secondItem="Ms5-Za-hef" secondAttribute="bottom" constant="143" id="UqH-Fv-JxE"/>
+                            <constraint firstItem="nFa-IR-iOX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ctJ-wZ-cua"/>
+                            <constraint firstItem="L0p-vB-zEq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hlO-TF-aLh"/>
+                            <constraint firstItem="7VX-ps-c0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sZc-5S-tzp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pickerview" prompt="Sayfa ici Pickerview Tasarımı" id="jJQ-PN-e2B">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="1kG-XY-P7z"/>
+                        <barButtonItem key="rightBarButtonItem" title="Text ile" id="zME-b0-0Wc">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <segue destination="eBK-bn-R8Q" kind="show" id="1ru-ff-Xjg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelGoster" destination="L0p-vB-zEq" id="ozh-P1-Uvn"/>
+                        <outlet property="labelSonuc" destination="Ms5-Za-hef" id="qbY-7Z-RBJ"/>
+                        <outlet property="pickerView" destination="7VX-ps-c0e" id="xwN-sw-1vO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="65.625"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="1ST-bE-hGx">
+            <objects>
+                <viewController title="Second View Controller" id="eBK-bn-R8Q" customClass="SecondViewController" customModule="PickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bU-8d-W6F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sehir Sec" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqF-d5-83T" userLabel="Textfield Sehir">
+                                <rect key="frame" x="107" y="232" width="200" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="BmB-Py-ERg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="44c-mq-fhJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vqF-d5-83T" firstAttribute="leading" secondItem="44c-mq-fhJ" secondAttribute="leading" constant="107" id="7pG-pd-o2g"/>
+                            <constraint firstItem="vqF-d5-83T" firstAttribute="top" secondItem="44c-mq-fhJ" secondAttribute="top" constant="110" id="TLh-sw-zog"/>
+                            <constraint firstItem="44c-mq-fhJ" firstAttribute="trailing" secondItem="vqF-d5-83T" secondAttribute="trailing" constant="107" id="qw4-p9-UeS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pickerview" prompt="Textfield ile Pickerview Kullanımı" id="r2k-2H-mDb"/>
+                    <connections>
+                        <outlet property="textfieldSehir" destination="vqF-d5-83T" id="ygn-jK-u9L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtJ-Fa-O6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="65.625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sag-ci-iZK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7ch-jJ-Y1y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4LV-Li-zju">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemPinkColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="r7S-yY-aLV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9OB-bF-Zs8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
